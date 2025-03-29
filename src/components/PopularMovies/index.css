@@ -1,0 +1,41 @@
+.popular-container {
+  background-color: #101828;
+  min-height: 90vh;
+  padding: 35px;
+}
+.popular-unordered-list {
+  margin-top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0px;
+}
+.failure-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.failure-image {
+  width: 450px;
+}
+.failure-heading {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .popular-container {
+    padding: 20px;
+  }
+  .failure-image {
+    width: 280px;
+  }
+  .failure-heading {
+    font-size: 20px;
+  }
+}

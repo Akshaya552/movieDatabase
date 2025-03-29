@@ -1,0 +1,17 @@
+.popular-container {
+  background-color: #101828;
+  min-height: 90vh;
+  padding: 35px;
+}
+.popular-unordered-list {
+  margin-top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0px;
+}
+@media screen and (max-width: 768px) {
+  .popular-container {
+    padding: 20px;
+  }
+}

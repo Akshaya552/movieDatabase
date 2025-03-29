@@ -1,0 +1,80 @@
+.moviecard-list-item {
+  background-color: #28303e;
+  padding: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 275px;
+}
+.moviecard-image {
+  width: 100%;
+  height: 230px;
+  margin-bottom: 10px;
+}
+.moviecard-title {
+  font-family: Roboto;
+  color: #f8f8f8;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0px;
+  padding-bottom: 10px;
+}
+
+.moviecard-rating {
+  font-family: Roboto;
+  color: #f8f8f8;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+}
+.moviecard-link-item {
+  align-self: center;
+  text-decoration: none;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.view-details-button {
+  padding: 10px;
+  width: 100px;
+  background-color: #007bff;
+  border: none;
+  color: #ffffff;
+  font-family: Roboto;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 13.5px;
+}
+
+@media screen and (max-width: 768px) {
+  .moviecard-list-item {
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 160px;
+  }
+  .moviecard-image {
+    height: 150px;
+    margin-bottom: 5px;
+  }
+  .moviecard-title {
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+
+  .moviecard-rating {
+    font-size: 12px;
+  }
+  .moviecard-link-item {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .view-details-button {
+    padding: 8px;
+    width: 80px;
+    font-size: 11px;
+  }
+}
