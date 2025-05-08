@@ -122,12 +122,12 @@
     font-size: 18px;
   }
   .cast-list-item {
-    width: 120px;
+    width: 95px;
     margin-right: 10px;
     margin-bottom: 10px;
   }
   .cast-image {
-    height: 100px;
+    height: 80px;
   }
   .original-name {
     font-size: 11px;
