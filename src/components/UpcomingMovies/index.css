@@ -15,3 +15,24 @@
     padding: 20px;
   }
 }
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: Roboto;
+}
+
+.page-button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  margin-right: 15px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.page-number {
+  color: #ffffff;
+  padding-right: 10px;
+}

@@ -14,12 +14,13 @@ const apiConstants = {
 const TopRatedMovies = () => {
   const [topmovies, setTopMovies] = useState([])
   const [topstatus, setTopStatus] = useState(apiConstants.initial)
+  const [pagenum, setPagenum] = useState(1)
 
   useEffect(() => {
     setTopStatus(apiConstants.inProgress)
     const fetchTopMovies = async () => {
       const response = await fetch(
-        `https://api.themoviedb.org/3/movie/top_rated?api_key=10367da7bf727fb1d7dc36c17ab0e4c1&language=en-US&page=1`,
+        `https://api.themoviedb.org/3/movie/top_rated?api_key=10367da7bf727fb1d7dc36c17ab0e4c1&language=en-US&page=${pagenum}`,
       )
       if (response.ok === true) {
         const data = await response.json()
@@ -36,7 +37,7 @@ const TopRatedMovies = () => {
       }
     }
     fetchTopMovies()
-  }, [])
+  }, [pagenum])
 
   const renderTopSuccess = () => (
     <ul className="popular-unordered-list">
@@ -76,10 +77,31 @@ const TopRatedMovies = () => {
     }
   }
 
+  const onPageBack = () => {
+    if (pagenum > 1) {
+      setPagenum(prev => prev - 1)
+    }
+  }
+
+  const onPageFront = () => {
+    setPagenum(prev => prev + 1)
+  }
+
   return (
     <>
       <Header />
-      <div className="popular-container">{renderTop()}</div>
+      <div className="popular-container">
+        {renderTop()}
+        <div className="button-container">
+          <button type="button" className="page-button" onClick={onPageBack}>
+            Prev
+          </button>
+          <p className="page-number">{pagenum}</p>
+          <button type="button" className="page-button" onClick={onPageFront}>
+            Next
+          </button>
+        </div>
+      </div>
     </>
   )
 }
